@@ -1,0 +1,2 @@
+[functions.fetch-faculty-data]
+verify_jwt = false  # 誰でも実行できる（Cronが叩くため）

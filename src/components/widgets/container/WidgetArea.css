@@ -1,0 +1,57 @@
+@keyframes shake {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(1deg);
+    }
+
+    50% {
+        transform: rotate(0deg);
+    }
+
+    75% {
+        transform: rotate(-1deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* 震えるアニメーション */
+.animate-shake {
+    animation: shake 0.2s infinite linear;
+}
+
+/* ★ 重要: 編集モード中の強力なリセットクラス */
+.widget-mode-editing {
+    /* スマホでのスクロールを強制停止（これが効けば勝てる！） */
+    touch-action: none !important;
+
+    /* 長押しメニュー（iOSの虫眼鏡とか画像の保存とか）を無効化 */
+    -webkit-touch-callout: none !important;
+
+    /* テキスト選択を無効化 */
+    -webkit-user-select: none !important;
+    user-select: none !important;
+
+    /* 画像のネイティブドラッグを無効化 */
+    -webkit-user-drag: none !important;
+
+    /* タップ時のハイライト（青い背景）を消す */
+    -webkit-tap-highlight-color: transparent !important;
+}
+
+/* 編集モード中、中身のクリック判定を完全に消す */
+.widget-content-locked {
+    pointer-events: none !important;
+}
+
+/* 通常時でも、画像やテキストがドラッグの邪魔をしないようにする安全策 */
+.widget-safe-touch {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
